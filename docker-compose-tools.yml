@@ -12,7 +12,7 @@ services:
       COVENANT_CONF: ./node_adapter/config.yaml
       COVENANTSQL_ADAPTER_ADDR: 0.0.0.0:4661
     volumes:
-      - ./test/service/node_adapter/:/app/node_adapter/
+      - ./test/service_split/node_adapter/:/app/node_adapter/
     networks:
       default:
         ipv4_address: 172.254.1.8
@@ -27,7 +27,7 @@ services:
       COVENANT_ROLE: mysql-adapter
       COVENANT_CONF: ./node_mysql_adapter/config.yaml
     volumes:
-      - ./test/service/node_mysql_adapter/:/app/node_mysql_adapter/
+      - ./test/service_split/node_mysql_adapter/:/app/node_mysql_adapter/
     networks:
       default:
         ipv4_address: 172.254.1.10
@@ -47,7 +47,7 @@ services:
       COVENANT_CONF: ./node_explorer/config.yaml
       COVENANTSQL_OBSERVER_ADDR: 0.0.0.0:4663
     volumes:
-      - ./test/service/node_explorer/:/app/node_explorer/
+      - ./test/service_split/node_explorer/:/app/node_explorer/
     networks:
       default:
         ipv4_address: 172.254.1.9
@@ -67,7 +67,7 @@ services:
       COVENANT_ROLE: blockproducer
       COVENANT_CONF: ./fullnode_0/config.yaml
     volumes:
-      - ./test/service/fullnode_0/:/app/fullnode_0/
+      - ./test/service_split/fullnode_0/:/app/fullnode_0/
     networks:
       default:
         ipv4_address: 172.254.1.11

@@ -13,7 +13,7 @@ services:
       COVENANT_CONF: ./node_miner_3/config.yaml
       METRIC_WEB_ADDR: '0.0.0.0:4665'
     volumes:
-      - ./test/service/node_miner_3/:/app/node_miner_3/
+      - ./test/service_split/node_miner_3/:/app/node_miner_3/
     networks:
       default:
         ipv4_address: 172.254.1.8
