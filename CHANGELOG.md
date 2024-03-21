@@ -1,4 +1,4 @@
-# Changelog
+# Changelog 
 
 ## [v0.8.0](https://github.com/CovenantSQL/CovenantSQL/tree/v0.8.0) (2019-08-07)
 
