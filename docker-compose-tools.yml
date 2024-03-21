@@ -7,6 +7,8 @@ services:
     restart: always
     ports:
       - '11105:4661'
+    expose:
+      - "11105"
     environment:
       COVENANT_ROLE: adapter
       COVENANT_CONF: ./node_adapter/config.yaml
@@ -22,6 +24,8 @@ services:
     restart: always
     ports:
       - '11107:4664'
+    expose:
+      - "11107"
     command: ['-listen', '0.0.0.0:4664']
     environment:
       COVENANT_ROLE: mysql-adapter
@@ -42,6 +46,8 @@ services:
     restart: always
     ports:
       - '11108:4663'
+    expose:
+      - "11108"
     environment:
       COVENANT_ROLE: explorer
       COVENANT_CONF: ./node_explorer/config.yaml
@@ -61,6 +67,8 @@ services:
     restart: always
     ports:
       - '11110:8546'
+    expose:
+      - "11110"
     command: ['-wsapi', ':8546']
     # entrypoint: ["sh"]
     environment:

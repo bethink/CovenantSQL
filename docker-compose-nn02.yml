@@ -8,6 +8,9 @@ services:
     ports:
       - '12100:4661'
       - '12101:4665'
+    expose:
+      - "12100"      
+      - "12101"
     environment:
       COVENANT_ROLE: blockproducer
       COVENANT_CONF: ./node_2/config.yaml
