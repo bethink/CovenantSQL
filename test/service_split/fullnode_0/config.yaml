@@ -54,7 +54,7 @@ KnownNodes:
       b: 0
       c: 0
       d: 0
-    Addr: bp00.guardianlink.io:11099
+    Addr: nn00.tn.opendb.co:12100
     PublicKey: '02c76216704d797c64c58bc11519fb68582e8e63de7e5b3b2dbbbe8733efe5fd24'
     Role: Leader
   - ID: 00000041772ecd779c68a3928d12675d9a65dce02f2ad6907f2cf53013f7e652

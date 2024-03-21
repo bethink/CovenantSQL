@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  miner_01:
+    image: covenantsql/covenantsql:latest
+    container_name: miner_01
+    restart: always
+    ports:
+      - '11100:4661'
+      - '12101:4665'
+    environment:
+      COVENANT_ROLE: miner
+      COVENANT_CONF: ./node_miner_1/config.yaml
+      METRIC_WEB_ADDR: '0.0.0.0:4665'
+    volumes:
+      - ./test/service/node_miner_1/:/app/node_miner_1/
+    networks:
+      default:
+        ipv4_address: 172.254.1.6
+    logging:
+      driver: 'json-file'
+      options:
+        max-size: '1m'
+        max-file: '10'
+
+networks:
+  default:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.254.1.0/24
