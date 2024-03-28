@@ -69,7 +69,7 @@ services:
       - '11110:8546'
     expose:
       - "11110"
-    command: ['-wsapi', ':8546']
+    command: ['-wsapi', ':8546', "-log-level", "debug"]
     # entrypoint: ["sh"]
     environment:
       COVENANT_ROLE: blockproducer
