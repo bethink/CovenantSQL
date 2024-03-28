@@ -3,7 +3,7 @@ WorkingRoot: "./"
 PubKeyStoreFile: "public.keystore"
 PrivateKeyFile: "private.key"
 DHTFileName: "dht.db"
-ListenAddr: "172.254.1.8:4661"
+ListenAddr: "172.254.1.11:4661"
 ThisNodeID: "000000a84cbab048a6b8668038ef78fc2370dc5ea89cbb0509a4ebd011320ce7"
 QPS: 1000
 ChainBusPeriod: 20s
