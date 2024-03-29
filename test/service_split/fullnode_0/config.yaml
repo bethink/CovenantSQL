@@ -54,12 +54,12 @@ KnownNodes:
       b: 0
       c: 0
       d: 0
-    Addr: 172.254.1.2:12100
+    Addr: 172.254.1.2:4661
     PublicKey: '02c76216704d797c64c58bc11519fb68582e8e63de7e5b3b2dbbbe8733efe5fd24'
     Role: Leader
   - ID: 00000041772ecd779c68a3928d12675d9a65dce02f2ad6907f2cf53013f7e652
     Role: Client
-    Addr: 172.254.1.11:11110
+    Addr: 172.254.1.11:4661
     PublicKey: 03ff62aa105dc94c2cea1e3e150a5fafbceb230868b7ed0b0f950915499dfeeadd
     Nonce:
       a: 3631427
