@@ -61,28 +61,28 @@ services:
       driver: 'json-file'
       options:
         max-size: '10m'
-  opendb_fullnode:
-    image: covenantsql/covenantsql:latest
-    container_name: opendb_fullnode
-    restart: always
-    ports:
-      - '11110:8546'
-    expose:
-      - "11110"
-    command: ['-wsapi', ':8546', "-log-level", "debug"]
-    # entrypoint: ["sh"]
-    environment:
-      COVENANT_ROLE: blockproducer
-      COVENANT_CONF: ./fullnode_0/config.yaml
-    volumes:
-      - ./test/service_split/fullnode_0/:/app/fullnode_0/
-    networks:
-      default:
-        ipv4_address: 172.254.1.11
-    logging:
-      driver: 'json-file'
-      options:
-        max-size: '10m'
+  # opendb_fullnode:
+  #   image: covenantsql/covenantsql:latest
+  #   container_name: opendb_fullnode
+  #   restart: always
+  #   ports:
+  #     - '11110:8546'
+  #   expose:
+  #     - "11110"
+  #   command: ['-wsapi', ':8546', "-log-level", "debug"]
+  #   # entrypoint: ["sh"]
+  #   environment:
+  #     COVENANT_ROLE: blockproducer
+  #     COVENANT_CONF: ./fullnode_0/config.yaml
+  #   volumes:
+  #     - ./test/service_split/fullnode_0/:/app/fullnode_0/
+  #   networks:
+  #     default:
+  #       ipv4_address: 172.254.1.11
+  #   logging:
+  #     driver: 'json-file'
+  #     options:
+  #       max-size: '10m'
 
 networks:
   default:
