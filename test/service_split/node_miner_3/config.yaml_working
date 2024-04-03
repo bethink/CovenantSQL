@@ -1,0 +1,51 @@
+WorkingRoot: ./
+PubKeyStoreFile: public.keystore
+PrivateKeyFile: private.key
+DHTFileName: dht.db
+WalletAddress: bf7c7f0bc2d0b97b1ce80e58b093860bb4a0e71d424a64e63131d3413737acf6
+ListenAddr: 0.0.0.0:11100
+ThisNodeID: 0000009484ad3815f905f5142279add5b5774824b8ab34630a923606a8373635
+ValidDNSKeys: {}
+MinNodeIDDifficulty: 0
+DNSSeed:
+  EnforcedDNSSEC: false
+  DNSServers:
+    #- 1.1.1.1
+      #- 202.46.34.74
+      #- 202.46.34.75
+      #- 202.46.34.76
+      #  Domain: tn.opendb.co
+      #BPCount: 3
+BlockProducer: null
+Miner:
+  RootDir: ./data
+  MaxReqTimeGap: 2s
+  ProvideServiceInterval: 3s
+KnownNodes:
+- ID: 00000bef611d346c0cbe1beaa76e7f0ed705a194fdf9ac3a248ec70e9c198bf9
+  Nonce:
+    a: 313283
+    b: 0
+    c: 0
+    d: 0
+  Addr: nn00.tn.opendb.co:12100
+  PublicKey: "02c76216704d797c64c58bc11519fb68582e8e63de7e5b3b2dbbbe8733efe5fd24"
+  Role: Leader
+- ID: 0000009484ad3815f905f5142279add5b5774824b8ab34630a923606a8373635
+  Role: Miner
+  Addr: 35.207.253.185:11100
+  PublicKey: 02ec20114a260803d08c45e944d57560d2f8eeb245a3e6f5eaa96a2db507b2e93e
+  Nonce:
+    a: 3580036
+    b: 0
+    c: 1356404378
+    d: 0
+QPS: 0
+ChainBusPeriod: 10s
+BillingBlockCount: 60
+BPPeriod: 10s
+BPTick: 3s
+SQLChainPeriod: 1m0s
+SQLChainTick: 10s
+SQLChainTTL: 10
+MinProviderDeposit: 1000000
