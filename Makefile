@@ -1,5 +1,5 @@
 default: all
-
+PATH := /usr/bin:$(PATH)
 # Do a parallel build with multiple jobs, based on the number of CPUs online
 # in this system: 'make -j8' on a 8-CPU system, etc.
 ifeq ($(JOBS),)
@@ -35,7 +35,7 @@ status:
 builder: status
 	# alpine image libmusl is not compatible with golang race detector
 	# also alpine libmusl is required for building static binaries to avoid glibc getaddrinfo panic
-	docker build \
+	@DOCKER_BUILDKIT=0 docker build \
 		--tag $(BUILDER):$(VERSION) \
 		--tag $(BUILDER):latest \
 		--build-arg BUILD_ARG=release \
